@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seu Cupom Chegou! - aTAG Connect</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary-color: #f27c36;
+        --bg-color: #f1f1f1;
+        --dark-text: #1c1c1c;
+        --light-text: #555555;
+        --white-color: #ffffff;
+        --font-title: "League Spartan", sans-serif;
+        --font-body: "Poppins", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-body);
+        line-height: 1.6;
+        color: var(--dark-text);
+        background-color: var(--bg-color);
+        background-image: linear-gradient(
+            rgba(241, 241, 241, 0.8),
+            rgba(241, 241, 241, 0.8)
+          ),
+          url("imgs/background.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        padding: 0 1.5rem;
+      }
+
+      header.container {
+        padding-top: 30px;
+        margin-bottom: 40px;
+      }
+      .logo-image {
+        height: 50px;
+        width: auto;
+      }
+
+      main.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .thank-you-content {
+        animation: fadeIn 1s ease-out;
+      }
+
+      h1 {
+        font-family: var(--font-title);
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      h2.subtitle {
+        font-family: var(--font-body);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: var(--light-text);
+        margin-bottom: 40px;
+      }
+
+      .instructions {
+        border-left: 3px solid var(--primary-color);
+        padding-left: 20px;
+        text-align: left;
+        margin-top: 40px;
+      }
+
+      .coupon-container {
+        background-color: var(--white-color);
+        border: 2px dashed var(--primary-color);
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .coupon-code {
+        font-family: var(--font-title);
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--dark-text);
+      }
+      .copy-button {
+        background-color: var(--dark-text);
+        color: var(--white-color);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        transition: background-color 0.2s;
+      }
+      .copy-button:hover {
+        background-color: #333;
+      }
+      .copy-button svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
+
+      .primary-button {
+        display: inline-block;
+        background: var(--primary-color);
+        color: var(--white-color);
+        padding: 15px 40px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-family: var(--font-title);
+        font-weight: 700;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        border: 2px solid var(--primary-color);
+      }
+      .primary-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .secondary-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--dark-text);
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-family: var(--font-title);
+        font-weight: 700;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        border: 2px solid var(--dark-text);
+      }
+      .secondary-button:hover {
+        background: var(--dark-text);
+        color: var(--white-color);
+      }
+      .secondary-button img {
+        width: 24px;
+        height: 24px;
+      }
+
+      footer {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        padding: 10px 0;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      footer p {
+        color: var(--white-color);
+        font-size: 1rem;
+        margin-bottom: 0;
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .dynamic-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        overflow: hidden;
+      }
+      .bg-shape {
+        position: absolute;
+        opacity: 0.02;
+        will-change: transform;
+      }
+      .shape-circle-lg {
+        width: 200px;
+        height: 200px;
+        background: var(--primary-color);
+        top: 10%;
+        left: 5%;
+        border-radius: 50%;
+        animation: pulse 15s ease-in-out infinite alternate;
+      }
+      .shape-circle-sm {
+        width: 120px;
+        height: 120px;
+        background: var(--dark-text);
+        bottom: 15%;
+        right: 10%;
+        border-radius: 50%;
+        animation: pulse 12s ease-in-out infinite alternate;
+        animation-delay: -6s;
+      }
+      .shape-square {
+        width: 80px;
+        height: 80px;
+        background: var(--primary-color);
+        top: 25%;
+        right: 15%;
+        animation: float 25s ease-in-out infinite alternate;
+      }
+      .shape-plus {
+        width: 60px;
+        height: 60px;
+        bottom: 40%;
+        left: 10%;
+        animation: spin 30s linear infinite;
+      }
+      .shape-plus::before,
+      .shape-plus::after {
+        content: "";
+        position: absolute;
+        background: var(--dark-text);
+      }
+      .shape-plus::before {
+        width: 100%;
+        height: 10px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+      .shape-plus::after {
+        width: 10px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+
+      @keyframes float {
+        from {
+          transform: translateY(0px) rotate(0deg);
+        }
+        to {
+          transform: translateY(-30px) rotate(25deg);
+        }
+      }
+      @keyframes pulse {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.15);
+        }
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dynamic-background">
+      <div class="bg-shape shape-circle-lg"></div>
+      <div class="bg-shape shape-circle-sm"></div>
+      <div class="bg-shape shape-square"></div>
+      <div class="bg-shape shape-plus"></div>
+    </div>
+
+    <header class="container">
+      <a href="index.html">
+        <img src="imgs/LOGO.png" alt="aTAG Connect Logo" class="logo-image" />
+      </a>
+    </header>
+
+    <main class="container">
+      <div class="thank-you-content">
+        <h1>Seu Cupom Chegou!</h1>
+        <h2 class="subtitle">
+          Use o código abaixo para garantir seu desconto.
+        </h2>
+
+        <div class="coupon-container">
+          <span id="coupon-code" class="coupon-code">PRIMEIRACOMPRA5</span>
+          <button id="copy-btn" class="copy-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"
+              />
+            </svg>
+            <span id="copy-text">COPIAR</span>
+          </button>
+        </div>
+
+        <p class="instructions">
+          Para garantir seu desconto, clique em "APLICAR CUPOM NA LOJA",
+          adicione os produtos ao carrinho e cole este código no campo "Cupom de
+          Desconto" antes de finalizar a compra.
+          <br /><br />
+          Se tiver qualquer dúvida, é só chamar a gente no WhatsApp!
+        </p>
+
+        <div class="button-group">
+          <!-- LINK DO BOTÃO DA LOJA ATUALIZADO -->
+          <a
+            href="https://www.lojapetcare.com.br/"
+            target="_blank"
+            class="primary-button"
+            >APLICAR CUPOM NA LOJA</a
+          >
+          <!-- LINK DO WHATSAPP ATUALIZADO COM NOVA MENSAGEM -->
+          <a
+            href="https://wa.me/5511999999999?text=Peguei%20meu%20cupom%2C%20como%20fa%C3%A7o%20para%20ativar%3F"
+            target="_blank"
+            class="secondary-button"
+          >
+            <img src="imgs/whatsapp.png" alt="Ícone do WhatsApp" />
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>aTAG Connect © 2025. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      const copyBtn = document.getElementById("copy-btn");
+      const copyText = document.getElementById("copy-text");
+      const couponCode = document.getElementById("coupon-code").textContent;
+
+      copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(couponCode).then(
+          () => {
+            copyText.textContent = "Copiado!";
+            copyBtn.style.backgroundColor = "#16a34a";
+
+            setTimeout(() => {
+              copyText.textContent = "COPIAR";
+              copyBtn.style.backgroundColor = "var(--dark-text)";
+            }, 2000);
+          },
+          () => {
+            copyText.textContent = "Erro!";
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
