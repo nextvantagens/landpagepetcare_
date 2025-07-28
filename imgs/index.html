@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Care aTAG Connect - A Segurança do seu Pet em Segundos</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dynamic-background">
+      <div class="bg-shape shape-circle-lg"></div>
+      <div class="bg-shape shape-circle-sm"></div>
+      <div class="bg-shape shape-square"></div>
+      <div class="bg-shape shape-plus"></div>
+    </div>
+
+    <header class="container">
+      <div class="header-content">
+        <a href="#">
+          <img src="imgs/LOGO.png" alt="aTAG Connect Logo" class="logo-image" />
+        </a>
+        <a href="#signup" class="header-cta">GANHAR DESCONTO</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="vsl-hero" class="container">
+        <h1 class="fade-in-up">
+          O sistema que localiza seu pet em
+          <span class="highlight-box">segundos</span>
+        </h1>
+        <p class="sub-headline fade-in-up delay-1">
+          Qualquer pessoa, com qualquer celular, pode escanear o pingente e
+          conectar você ao seu melhor amigo instantaneamente.
+        </p>
+        <div class="video-wrapper fade-in-up delay-2">
+          <div class="video-frame">
+            <video id="main-video" autoplay muted loop playsinline>
+              <source src="video/HORIZONTAL PETCARE.mp4" type="video/mp4" />
+              Seu navegador não suporta a tag de vídeo.
+            </video>
+          </div>
+          <div class="video-controls">
+            <button
+              id="play-pause-btn"
+              class="control-button"
+              aria-label="Pausar ou Reproduzir"
+            >
+              <svg id="play-icon" viewBox="0 0 24 24" style="display: none">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+              <svg id="pause-icon" viewBox="0 0 24 24">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+              </svg>
+            </button>
+            <div class="volume-control">
+              <button
+                id="mute-unmute-btn"
+                class="control-button"
+                aria-label="Mutar ou Desmutar"
+              >
+                <svg id="unmute-icon" viewBox="0 0 24 24" style="display: none">
+                  <path
+                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+                  ></path>
+                </svg>
+                <svg id="mute-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
+                  ></path>
+                </svg>
+              </button>
+              <input
+                type="range"
+                id="volume-slider"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+              />
+            </div>
+          </div>
+        </div>
+        <a href="#signup" class="cta-button fade-in-up delay-3"
+          >QUERO PROTEGER MEU PET AGORA!</a
+        >
+      </section>
+
+      <section id="how-it-works" class="content-section container">
+        <div class="content-wrapper fade-in-up">
+          <div class="hiw-shape hiw-shape-1"></div>
+          <div class="hiw-shape hiw-shape-2"></div>
+          <div class="how-it-works-grid">
+            <div class="how-it-works-text">
+              <span class="feature-tag">COMO FUNCIONA</span>
+              <h2>Uma Experiência Confiável e <span>Intuitiva.</span></h2>
+              <p>
+                Criamos um sistema de reencontro rápido que qualquer pessoa pode
+                usar, garantindo que a segurança do seu pet nunca dependa de
+                apps ou burocracia.
+              </p>
+              <a href="#signup" class="cta-button">Proteger meu Pet</a>
+            </div>
+            <div class="feature-list-vertical">
+              <div class="feature-item-vertical fade-in-up delay-1">
+                <div class="feature-icon-vertical">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                    />
+                  </svg>
+                </div>
+                <div class="feature-text-vertical">
+                  <h4>Escaneamento Instantâneo</h4>
+                  <p>Aproxime o celular (NFC) ou use a câmera (QR Code).</p>
+                </div>
+              </div>
+              <div class="feature-item-vertical fade-in-up delay-2">
+                <div class="feature-icon-vertical">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                </div>
+                <div class="feature-text-vertical">
+                  <h4>Perfil Online Inteligente</h4>
+                  <p>Visualize as infos do pet e seu contato na hora.</p>
+                </div>
+              </div>
+              <div class="feature-item-vertical fade-in-up delay-3">
+                <div class="feature-icon-vertical">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                    />
+                  </svg>
+                </div>
+                <div class="feature-text-vertical">
+                  <h4>Reencontro Rápido</h4>
+                  <p>Com um clique, a pessoa que o encontrou te liga.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="technology" class="content-section container">
+        <div class="content-wrapper fade-in-up">
+          <div class="tech-layout-grid">
+            <div class="tech-image-composition fade-in-up">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <img
+                src="imgs/GATO BRANCO.png"
+                alt="Gato branco olhando para a câmera"
+                class="main-tech-photo"
+              />
+            </div>
+            <div class="tech-text-content fade-in-up delay-1">
+              <span class="feature-tag">NOSSA TECNOLOGIA</span>
+              <h2>Conexão Rápida, <span>Segurança Máxima.</span></h2>
+              <p>
+                Usamos a combinação de tecnologias universais para garantir que
+                a segurança do seu pet não dependa de sorte, mas sim de um
+                sistema inteligente e confiável.
+              </p>
+              <ul class="tech-benefits-list">
+                <li>
+                  <span class="check-icon"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12.75l6 6 9-13.5"
+                      /></svg></span
+                  ><span
+                    ><strong>Dupla Tecnologia:</strong> NFC + QR Code para 100%
+                    de compatibilidade.</span
+                  >
+                </li>
+                <li>
+                  <span class="check-icon"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12.75l6 6 9-13.5"
+                      /></svg></span
+                  ><span
+                    ><strong>Design Resistente:</strong> Feito para aguentar
+                    água, poeira e o dia a dia agitado do seu pet.</span
+                  >
+                </li>
+                <li>
+                  <span class="check-icon"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 12.75l6 6 9-13.5"
+                      /></svg></span
+                  ><span
+                    ><strong>Sem Mensalidades:</strong> Pague uma vez, proteja
+                    para sempre. Sem taxas ocultas.</span
+                  >
+                </li>
+              </ul>
+              <a href="#signup" class="cta-button">Quero essa tecnologia</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="personalization" class="content-section container">
+        <h2 class="fade-in-up">Personalize como quiser</h2>
+        <p class="section-subtitle fade-in-up delay-1">
+          A segurança do seu pet com o estilo dele.
+        </p>
+        <div class="personalization-layout fade-in-up delay-2">
+          <div class="personalization-choices">
+            <h3>Escolha o Formato</h3>
+            <p>
+              Cada formato foi desenhado pensando no conforto e estilo do seu
+              companheiro.
+            </p>
+            <div class="pendant-selector-grid">
+              <div
+                class="pendant-choice active"
+                data-mockup-src="imgs/MOCKUP OSSO.png"
+                data-icon-src="imgs/OSSO.png"
+                data-title="Formato Osso"
+                data-description="Um design clássico e universal, perfeito para cães de todos os portes. Divertido e reconhecível."
+              >
+                <div class="pendant-icon">
+                  <img src="imgs/OSSO.png" alt="Ícone Pingente Osso" />
+                </div>
+                <span class="pendant-name">Formato Osso</span>
+              </div>
+              <div
+                class="pendant-choice"
+                data-mockup-src="imgs/MOCKUP CORAÇÃO.png"
+                data-icon-src="imgs/CORAÇÃO.png"
+                data-title="Formato Coração"
+                data-description="Mostre todo o seu amor. Um formato delicado e charmoso, ideal para pets cheios de carinho."
+              >
+                <div class="pendant-icon">
+                  <img src="imgs/CORAÇÃO.png" alt="Ícone Pingente Coração" />
+                </div>
+                <span class="pendant-name">Formato Coração</span>
+              </div>
+              <div
+                class="pendant-choice"
+                data-mockup-src="imgs/MOCKUP GATO.png"
+                data-icon-src="imgs/GATO.png"
+                data-title="Formato Gato"
+                data-description="Perfeito para os felinos! Um design elegante que combina com a personalidade independente do seu gato."
+              >
+                <div class="pendant-icon">
+                  <img src="imgs/GATO.png" alt="Ícone Pingente Gato" />
+                </div>
+                <span class="pendant-name">Formato Gato</span>
+              </div>
+              <div
+                class="pendant-choice"
+                data-mockup-src="imgs/MOCKUP CASA.png"
+                data-icon-src="imgs/CASA.png"
+                data-title="Formato Casa"
+                data-description="Simboliza o lar e a segurança. Um pingente que representa o caminho de volta para casa."
+              >
+                <div class="pendant-icon">
+                  <img src="imgs/CASA.png" alt="Ícone Pingente Casa" />
+                </div>
+                <span class="pendant-name">Formato Casa</span>
+              </div>
+            </div>
+          </div>
+          <div class="personalization-display">
+            <div class="mockup-viewer">
+              <img
+                id="mockup-image"
+                src="imgs/MOCKUP OSSO.png"
+                alt="Mockup de pet com pingente inteligente"
+              />
+            </div>
+            <div class="mockup-info">
+              <h4 id="pendant-title">Formato Osso</h4>
+              <p id="pendant-description">
+                Um design clássico e universal, perfeito para cães de todos os
+                portes. Divertido e reconhecível.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="section-cta fade-in-up delay-3">
+          <a href="#signup" class="cta-button">Ver Todas as Opções</a>
+        </div>
+      </section>
+
+      <section id="signup" class="fade-in-up">
+        <div class="container">
+          <h2>Ganhe 5% de Desconto!</h2>
+          <p>
+            Cadastre seu e-mail para receber um cupom de 5% de desconto na sua
+            primeira compra e junte-se à nossa comunidade de tutores que não
+            abrem mão da segurança.
+          </p>
+          <form class="signup-form" id="discount-form">
+            <input
+              type="email"
+              id="email-input"
+              placeholder="seu.email@exemplo.com"
+              required
+            />
+            <button type="submit" class="cta-button">PROTEGER MEU PET</button>
+          </form>
+          <div id="signup-message"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">
+      <p>aTAG Connect © 2025. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="whatsapp-container">
+      <button
+        id="whatsapp-open-chat"
+        class="whatsapp-float-button"
+        title="Fale conosco pelo WhatsApp"
+      >
+        <img src="imgs/whatsapp.png" alt="Ícone do WhatsApp" />
+      </button>
+
+      <div id="whatsapp-chat-box" class="whatsapp-chat-box hidden">
+        <div class="chat-box-header">
+          <h4>Fale Conosco</h4>
+          <button id="chat-box-close" class="chat-box-close" title="Fechar">
+            ×
+          </button>
+        </div>
+        <div class="chat-box-body">
+          <p>Para iniciar a conversa, por favor, nos informe seu e-mail.</p>
+        </div>
+        <div class="chat-box-footer">
+          <form id="chat-box-form" class="chat-box-form">
+            <input
+              id="chat-box-input"
+              type="email"
+              class="chat-box-input"
+              placeholder="seu.email@exemplo.com"
+              required
+            />
+            <button type="submit" class="chat-box-send">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
